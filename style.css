@@ -1,0 +1,121 @@
+:root{
+
+    --fondo-principal: linear-gradient(to right, #ce5937 0%, #a115a4 50%, #9c17c5 100%);
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+    font-size: 62.5%; /*10 pixeles*/
+    font-family: 'Goldman', cursive;
+   
+}
+
+body{
+
+    font-size: 1.6rem; /*16 pixeles*/
+}
+
+.header-container{
+
+    position:sticky; /*queda pegado arriba*/
+    top:0; /*sin margen arriba*/
+    background: var(--fondo-principal);
+    z-index:1;
+
+}
+
+.header-container__nav{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10rem;
+    margin-bottom: 2rem;
+}
+
+.header-container__logo{
+
+    height:8rem;
+}
+
+.main-container{
+
+    display: flex;
+    flex-wrap: wrap; /*uno abajo del otro*/
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    gap: 2.5rem; /*distancia entre items dif a margin no deja mas margen al costado de la tarjeta*/
+}
+
+.main-container__link-container{
+
+    width: 30rem; /* me hace la imagen más pequeña*/
+    min-height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.3rem;
+    box-shadow: 2px 1px 15px -1px #000000;
+    z-index: 0;
+
+}
+
+.main-container__link-container:hover{
+
+    transform:scale(1.1);
+}
+
+.main-container__img{
+
+    width: 100%;
+    filter: grayscale(1);
+    transition-duration: 0.5s;
+}
+
+.main-container__img:hover{
+    filter: grayscale(0);
+    
+}
+.logo-fixed{
+
+    position: fixed;
+    bottom: 3rem;
+    right:1rem;
+    height: 8rem;
+}
+
+.logo-fixed__img{
+
+    height: 100%;
+    
+}
+
+.footer{
+
+    height: 9vh;
+    background: var(--fondo-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    
+}
+
+@media (min-width:600px){
+
+    .header-container__logo{
+
+        height: 10rem;
+
+    }
+
+    .logo-fixed{
+
+        height: 10rem;
+    }
+}
